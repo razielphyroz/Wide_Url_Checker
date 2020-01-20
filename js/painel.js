@@ -25,6 +25,13 @@ function urlPatternCheck(urlToInsert) {
   return regexMatchUrl.test(urlToInsert);
 }
 
+// Called when the refresh button is hitted
+function refreshButton() {
+  hideFeedbacks();
+  $("#refreshedBox").show();
+  reloadUrls();
+}
+
 // Update the URL's array by making a request
 function reloadUrls() {
   var xhr = new XMLHttpRequest();
@@ -84,3 +91,4 @@ function hideFeedbacks() {
 }
 
 hideFeedbacks();
+reloadUrls();
