@@ -37,6 +37,31 @@ function reloadUrls() {
   }
 }
 
+function createHtmlCard(obj) {
+
+   // Clones the HTML model box
+   var boxClone = urlBoxModel.cloneNode(true);
+   boxClone.classList.remove("hidden");
+
+   // Manages the URL name
+   boxClone.getElementsByClassName("url-name")[0].innerHTML = obj.url;
+
+   // Manages the URL status
+   var urlStatus = obj.status ? `Status: ${obj.status}` : 'Unverified';
+   boxClone.getElementsByClassName("url-status")[0].innerHTML = urlStatus;
+   
+   // Manages the URL body
+   var bodyElement = boxClone.getElementsByClassName("url-body")[0];
+   
+   if (obj.body) {
+     bodyElement.innerHTML = obj.body;
+   } else {
+     boxClone.removeChild(bodyElement);
+   }
+
+   return boxClone;
+}
+
 // Hides all the feedback boxes
 function hideFeedbacks() {
   $("#errorBox").hide();
