@@ -1,5 +1,23 @@
 var urlsArray = [];
 
+// Called when user hits the "Submit" button
+function submitUrl() {
+  var urlInput = document.getElementById("url");
+  const urlToInsert = urlInput.value.toLowerCase().trim();
+  const isUrlPatternCorrect = urlPatternCheck(urlToInsert);
+
+  hideFeedbacks();
+
+  if (isUrlPatternCorrect) {
+    insertUrlOnDb(urlToInsert);
+    reloadUrls();
+    urlInput.value = "";
+    $("#successBox").show();
+  } else {
+    $("#errorBox").show();
+  }
+}
+
 // Checks the URL pattern
 function urlPatternCheck(urlToInsert) {
   var regexMatchUrl = new RegExp("^(?:http(s)?:\\/\\/)?[\\w.-]+(?:\\.[\\w\\.-]+)+[\\w\\-\\._~:/?#[\\]@!\\$&'\\(\\)\\*\\+,;=.]+$");
