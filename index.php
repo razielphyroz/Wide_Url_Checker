@@ -16,7 +16,7 @@
     <meta charset="utf-8">
     <title>Wide Url Checker</title>
     <link rel="stylesheet" href="css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="css/login.css">
+    <link rel="stylesheet" type="text/css" href="css/global.css">
 </head>
 
 <body>
