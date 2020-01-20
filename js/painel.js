@@ -25,6 +25,16 @@ function urlPatternCheck(urlToInsert) {
   return regexMatchUrl.test(urlToInsert);
 }
 
+// Inserts the URL in the database
+function insertUrlOnDb(urlToInsert) {
+  var data = new FormData();
+  data.append('url', urlToInsert);
+
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'url_manager.php', true);
+  xhr.send(data);
+}
+
 // Called when the refresh button is hitted
 function refreshButton() {
   hideFeedbacks();
