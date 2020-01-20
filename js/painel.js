@@ -1,4 +1,5 @@
 var urlsArray = [];
+const urlBoxModel = document.getElementById("urlBoxModel");
 
 // Called when user hits the "Submit" button
 function submitUrl() {
@@ -33,7 +34,20 @@ function reloadUrls() {
   xhr.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
       urlsArray = JSON.parse(this.response);
+      updateUrlsOnHTML(); // Resfreshing the HTML list
     }
+  }
+}
+
+// Resfreshs the URL's list on the HTML
+function updateUrlsOnHTML() {
+
+  var urlsBox = document.getElementById("urlsBox");
+  urlsBox.innerHTML = "";
+
+  for (var obj of urlsArray.reverse()) {
+    var boxClone = createHtmlCard(obj);
+    urlsBox.appendChild(boxClone);
   }
 }
 
