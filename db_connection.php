@@ -1,5 +1,11 @@
 <?php
 
+  if (!isset($_SESSION)) 
+    session_start();
+
+  if (!$_SESSION['isLoggedIn']) 
+    header('Location: index.php');
+
   // DB config
   define('HOST', '127.0.0.1');
   define('USER', 'root');
