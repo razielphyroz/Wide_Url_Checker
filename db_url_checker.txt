@@ -1,5 +1,14 @@
+CREATE DATABASE url_checker;
+
 CREATE TABLE users ( 
 	user_id int PRIMARY KEY NOT NULL AUTO_INCREMENT, 
 	username varchar(200) NOT NULL, 
 	password varchar(32) NOT NULL 
-)
+);
+
+CREATE TABLE urls ( 
+	url_id int PRIMARY KEY NOT NULL AUTO_INCREMENT, 
+	url varchar(200) NOT NULL, 
+	status varchar(4),
+	body text
+);
