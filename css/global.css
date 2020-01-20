@@ -8,15 +8,18 @@ html,body {
   background: #f2f7fa;
 }
 
-.hero .nav, .hero.is-success .nav {
-  -webkit-box-shadow: none;
-  box-shadow: none;
-}
-
 input {
   font-weight: 300;
 }
 
 p {
   font-weight: 700;
+}
+
+h3  {
+  margin: 40px;
+}
+
+.centered {
+  margin: 0 auto;
 }
