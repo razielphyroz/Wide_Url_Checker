@@ -23,3 +23,50 @@ h3  {
 .centered {
   margin: 0 auto;
 }
+
+.box-header {
+  display: flex;
+  border: 1px solid gainsboro;
+  height: 30px;
+}
+
+.box-header > div {
+  height: 100%;
+}
+
+.url-name {
+  margin: auto 0;
+  vertical-align: top;
+  padding-left: 5px;
+  align-content: center;
+  text-align: left;
+  width: 80%;
+}
+
+.url-status {
+  border-left: 1px solid gainsboro;
+  width: 20%;
+}
+
+.url-body {
+  font-size: 13px;
+  border: 1px solid gainsboro;
+  border-top: none;
+  padding: 5px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+  max-height: 300px;
+}
+
+.box > div {
+ width: 100%;
+}
+
+textarea:disabled {
+  background: none;
+}
+
+.hidden {
+  visibility: hidden;
+}
