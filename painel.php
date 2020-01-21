@@ -49,8 +49,8 @@
                 </div>
                 <div id="urlBoxModel" class="box hidden">
                     <div class="box-header">
-                        <div class="url-name has-text-grey">spaceot.com</div>
-                        <div class="url-status has-text-grey">Status 200</div>
+                        <div class="url-name has-text-grey"></div>
+                        <div class="url-status has-text-grey"></div>
                     </div>
                     <textarea class="url-body" readonly disabled></textarea>
                 </div>
