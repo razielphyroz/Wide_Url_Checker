@@ -10,5 +10,5 @@ CREATE TABLE urls (
 	url_id int PRIMARY KEY NOT NULL AUTO_INCREMENT, 
 	url varchar(200) NOT NULL, 
 	status varchar(4),
-	body text
+	body mediumtext
 );
