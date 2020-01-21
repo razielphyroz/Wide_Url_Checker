@@ -36,13 +36,13 @@
                     </div>
                     <button onclick="submitUrl()" class="button is-block is-link is-large centered" >Submit</button>
                 </div>
-                <div id="errorBox" class="notification is-danger">
+                <div id="errorBox" class="notification is-danger hidden">
                   <p>ERROR: Wrong Url Format.</p>
                 </div>
-                <div id="successBox" class="notification is-success">
+                <div id="successBox" class="notification is-success hidden">
                   <p>SUCCESS: URL inserted!</p>
                 </div>
-                <div id="refreshedBox" class="notification is-warning">
+                <div id="refreshedBox" class="notification is-warning hidden">
                   <p>REFRESH: URL list refreshed!</p>
                 </div>
                 <div id="urlsBox">

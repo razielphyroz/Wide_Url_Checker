@@ -100,5 +100,14 @@ function hideFeedbacks() {
   $("#refreshedBox").hide();
 }
 
+// Enable feedbacks visibility
+function enableFeedbacks() {
+  const feedbacksToEnable = ['errorBox', 'successBox', 'refreshedBox'];
+  for (name of feedbacksToEnable) {
+    document.getElementById(name).classList.remove("hidden");
+  }
+}
+
+enableFeedbacks();
 hideFeedbacks();
 reloadUrls();
